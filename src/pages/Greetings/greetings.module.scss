@@ -1,0 +1,28 @@
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/color-palette.scss' as *;
+
+.greetings {
+    @include authPage-bg-gradient();
+    height: 100vh;
+
+    &__title {
+        @include typography-largeTitle-Bold();
+        color: $primary-white-1;
+        text-align: center;
+        margin-top: 6%;
+        margin-bottom: 16px;
+    }
+
+    &__paragraph {
+        @include typography-largeTitle-Regular();
+        color: $primary-white-1;
+        text-align: center;
+    }
+
+    &__img {
+        width: 55%;
+        height: 75%;
+        margin-top: auto;
+    }
+
+}

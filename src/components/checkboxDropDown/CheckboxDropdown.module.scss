@@ -1,0 +1,74 @@
+@use "./../../styles/color-palette.scss" as *;
+@use "./../../styles/mixins.scss" as *;
+
+.menu__dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    &_item {
+        list-style-type: none;
+        margin-bottom: 12px;
+    }
+    &_checkbox {
+        display: none;
+        @include typography-subTitle-regular;
+    }
+
+    &_btn {
+        width: 153px;
+        height: 40px;
+        padding: 9px 20px;
+        border-radius: 12px;
+        background-color: $primary-white-3;
+        border: 1px solid $accent-blue-1;
+        color: $accent-blue-1;
+        cursor: pointer;
+        transition: opacity 0.2s ease-in;
+        &:hover {
+            background-color: $accent-blue-1;
+            color: $primary-white-3;
+            opacity: 0.8;
+        }
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+    }
+    &_buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.newCheckbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.menu__dropdown li label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__dropdown_checkbox:checked + .newCheckbox {
+    background-color: $primary-white-3;
+    border-color: $primary-black-1; /* Цвет рамки при выборе */
+}
+.menu__dropdown_checkbox:checked + .newCheckbox::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid $primary-lavander-1;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}

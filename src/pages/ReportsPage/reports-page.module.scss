@@ -1,0 +1,26 @@
+.reports {
+    width: 100%;
+
+    &__container {
+        margin-left: auto;
+        width: 80%;
+        height: 72vh;
+        display: grid;
+        grid-template-areas:
+            'donut donut bar bar bar bar bar'
+            'donut donut bar bar bar bar bar'
+            'rtable rtable rtable rtable rtable rtable rtable';
+            grid-template-columns: 7fr 7fr 7fr 7fr 7fr 7fr 7fr;
+    }
+
+   
+     &__bar_block {
+        grid-area: bar;
+    }
+    &__donut_block {
+        grid-area: donut;
+    }
+    &__table{
+        grid-area: rtable;
+    }
+}

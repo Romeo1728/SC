@@ -1,0 +1,126 @@
+@use "./../../styles/color-palette.scss" as *;
+@use "./../../styles/mixins.scss" as *;
+
+.table {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #fff;
+    height: 73vh;
+
+    &__row {
+        list-style-type: none;
+        display: flex;
+        border-bottom: 1px solid #c5dcee;
+        transition: opacity 0.2s ease-in;
+/*
+        &:hover {
+            background-color: #dde1e6;
+            opacity: 0.8;
+        }
+*/
+        &_title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            flex: 1;
+            text-align: center;
+            border-left: 1px solid #c5dcee;
+            padding: 13px;
+            @include typography-body-regular();
+            
+        }
+    }
+
+    &__header {
+        display: flex;
+        text-align: center;
+        padding: 0 8px 0 0;
+        margin: 0;
+        background-color: $primary-blue-5;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        &_title {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex: 1;
+            list-style-type: none;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-left: 1px solid #dde1e6;
+            @include typography-sf_pro_display;
+
+            &:hover {
+                background: #9db5d8;
+                cursor: pointer;
+            }
+        }
+
+        &_title:nth-last-of-type(1) span {
+            display: none;
+
+        }
+
+        &_title:first-child {
+            border-top-left-radius: 20px;
+        }
+
+    }
+}
+
+.table__body {
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        /* Ширина скролла */
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #efefef;
+        /* Цвет фона трека */
+        border-bottom-right-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $primary-blue-5;
+        /* Цвет ползунка */
+        border-radius: 8px;
+        /* Скругление ползунка */
+
+        &:hover {
+            background: #9db5d8;
+            /* Цвет ползунка при наведении */
+        }
+    }
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid $primary-black-1;
+    transition: transform 0.3s ease;
+}
+
+
+.rotate180 {
+    transform: rotate(180deg);
+}
+
+.table__users {}

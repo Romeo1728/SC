@@ -1,0 +1,39 @@
+@use '../../styles/mixins.scss' as *;
+@use '../../styles/color-palette.scss' as *;
+
+.test {
+
+  &__icon {
+    margin-bottom: 20px;
+  }
+
+  &__block {
+    color: $primary-black-1;
+
+    background-color: white;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+    @include typography-h2; //подключение типографии 
+    color: $primary-black-1;
+    margin-bottom: 50px;
+  }
+
+  &__btn_modal {
+    margin-bottom: 20px;
+  }
+
+  &__chart_container {
+    width: 20%;
+    margin-bottom: 50px;
+  }
+}

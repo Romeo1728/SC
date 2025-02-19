@@ -1,0 +1,71 @@
+@use './color-palette.scss' as *;
+
+@mixin typography($font-family, $font-size, $line-height, $font-weight, $letter-spacing) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin typography-h1 {
+  @include typography('Roboto', 48px, 56px, 600, 0.3px)
+}
+
+@mixin typography-h2 {
+  @include typography('Manrope', 42px, 46px, 700, 0.4px)
+}
+
+@mixin typography-h3 {
+  @include typography('Roboto', 28px, 32px, 700, 0.4px)
+}
+
+@mixin typography-headline-bold {
+  @include typography('Monrope', 20px, 24px, 600, 0.4px)
+}
+
+@mixin typography-body-regular {
+  @include typography('Manrope', 16px, 1.4, 400, 0px)
+}
+
+@mixin typography-span-medium {
+  @include typography('SF Pro Display', 12px, 1, 500, 0px)
+}
+
+@mixin typography-sf_pro_display {
+  @include typography("SF Pro Display", 15px, 18px, 300, 0);
+}
+
+@mixin typography-navBar-items {
+  @include typography('Manrope', 20px, 22px, 400, 0.4px)
+}
+
+@mixin typography-largeTitle-Bold {
+  @include typography('Manrope', 42px, 46px, 700, 0.4px)
+}
+
+@mixin typography-largeTitle-Regular {
+  @include typography('Manrope', 42px, 46px, 400, 0.4px)
+}
+@mixin typography-Title2-Bold {
+  @include typography("Manrope", 22px, 28px, 700, 0.4px)
+}
+@mixin typography-subTitle-regular {
+  @include typography("Manrope", 14px, 20px, 400, -0.5px)
+}
+@mixin typography-subTitle-bold {
+  @include typography("Manrope", 15px, 20px, 700, -0.5px)
+}
+@mixin typography-modalTitle-regular {
+  @include typography("Manrope", 28px, 34px, 400, .36px)
+}
+
+@mixin authPage-bg-gradient {
+  background: $primary-blue-gradient;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+}

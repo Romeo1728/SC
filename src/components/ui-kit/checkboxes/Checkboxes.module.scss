@@ -1,0 +1,30 @@
+@use "../../../styles/color-palette.scss" as *;
+@use "../../../styles/mixins.scss" as *;
+
+.checkboxField {
+    display: flex;
+    flex-direction: column;
+    width: 319px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.btnField {
+    display: flex;
+    gap: 10px;
+}
+.btn {
+    width: 342px;
+    height: 56px;
+    padding: 20px 22px;
+    border-radius: 12px;
+    background-color: $accent-blue-1;
+    color: $primary-white-3;
+    transition: opacity 0.2s ease-in;
+    cursor: pointer;
+    &:hover {
+        background-color: $accent-blue-2;
+        opacity: 0.8;
+    }
+}

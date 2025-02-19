@@ -1,0 +1,150 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/color-palette.scss" as *;
+
+.forgot {
+  &__wrapper {
+    background: $primary-blue-gradient;
+    width: 100%;
+    height: 100vh;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-white-3;
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 29px;
+    padding-top: 100px;
+    margin-bottom: 174px;
+  }
+
+  &__txt {
+    margin-left: 8px;
+  }
+
+  &__text{
+    @include typography-subTitle-regular;
+    margin-bottom: 28px;
+  }
+
+  &__box {
+    width: 554px;
+    background: $primary-white-3;
+    padding: 44px 44px 24px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    color: $primary-black-1;
+  }
+
+  &__title {
+    width: 100%;
+    color: $accent-blue-1;
+    @include typography-h2;
+    font-family: "Manrope", sans-serif;
+    margin-bottom: 28px;
+  }
+
+  &__input_box {
+    width: 446px;
+    margin-bottom: 20px;
+    position: relative;
+    &--pass {
+      width: 100%;
+    }
+
+    & label {
+      position: absolute;
+      left: 16px;
+      top: 20px;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 16px;
+    border: 1px solid #c5dcee;
+    @include typography-body-regular();
+    outline: 0;
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+
+    &:valid ~ label,
+    &:focus ~ label {
+      top: 6px;
+      font-size: 10px;
+    }
+
+    &_error {
+      border: 2px solid red;
+      background-color: #ffe6e6;
+    }
+  }
+
+  &__icon__error {
+    position: absolute;
+    right: 10px;
+    top: 37%;
+    transform: translateY(-50%);
+  }
+
+  &__button {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    background-color: $accent-blue-1;
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; 
+    &--white {
+      background: #fff;
+      color: $accent-blue-1;
+      border: 1px solid $accent-blue-1;
+    }
+  }
+
+  &__error {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.5px;
+    color: red;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__recovery {
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $accent-blue-1;
+  }
+}

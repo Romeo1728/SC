@@ -1,0 +1,67 @@
+@use "../../../styles/color-palette.scss" as *;
+@use "../../../styles/mixins.scss" as *;
+
+.popup {
+  position: relative;
+  width: 100%;
+  max-width: 341px;
+  
+  &__select, &__select_open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEFEFF;
+    border: 1px solid #C5DCEE;
+    padding: 12px;
+    width: 100%;
+    color: $primary-gray-3;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+
+  &__select {
+    opacity: 0.6;
+    border-radius: 12px;
+
+    &:hover {
+      opacity: 1;
+      box-shadow: 0 4px 68px 0 #355ED933;
+    }
+  }
+
+  &__select_open {
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    opacity: 1;
+  }
+
+  &__selectIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  &__text {
+    width: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-white-2;
+    width: 100%;
+    max-width: 341px;
+    box-sizing: border-box;
+    border: 1px solid #C5DCEE;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    padding: 12px;
+    position: absolute;
+    z-index: 1000;
+  }
+}

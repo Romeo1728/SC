@@ -1,0 +1,36 @@
+@use "../../../styles/color-palette.scss" as *;
+@use "../../../styles/mixins.scss" as *;
+
+.userCard {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px;
+  
+  &__img_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $primary-blue-6;
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+  }
+
+
+  &__name {
+    margin: 0;
+    width: 50%;
+    color: $primary-black-1;
+    @include typography-headline-bold;
+  }
+}
+
+.userCard:hover {
+  background-color: $primary-blue-2;
+}
+
+.userCard:active {
+  background-color: $primary-blue-5;
+}

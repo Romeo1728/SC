@@ -1,0 +1,26 @@
+@use '../../styles/color-palette.scss' as *;
+
+.usersPage {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: $primary-blue-6;
+
+    &__table {
+        color: $primary-black-1;
+    }
+
+    &__container {
+        display: grid;
+        grid-auto-rows: max-content;
+        width: 80%;
+        padding: 0 40px;
+        background-color: $primary-blue-6;
+        //border-radius: 20px;
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+}

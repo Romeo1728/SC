@@ -1,0 +1,47 @@
+@use "../../../styles/color-palette.scss" as *;
+@use "../../../styles/mixins.scss" as *;
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.checkbox_container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox_input {
+  display: none;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid $primary-black-1;
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.checkbox_input:checked + .checkbox::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  border: solid #79BEFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  left: 5px;
+}

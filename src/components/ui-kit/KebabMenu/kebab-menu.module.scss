@@ -1,0 +1,52 @@
+@use '../../../styles/color-palette.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.kebab {
+  
+    &__btn {
+        height: 17px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 2px;
+    }
+
+    &__dot {
+        display: block;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: $primary-gray-2;
+    }
+
+    &__dot:not(:last-child) {
+        margin-right: 2px;
+    }
+
+    &__menu {
+        position: absolute;
+        border-radius: 10px;
+        border: 1px solid $primary-gray-1;
+        display: none;
+        background-color: $primary-white;
+        flex-direction: column;
+        z-index: 100;
+    }
+
+    &__option {
+        padding: 12px;
+        color: $primary-gray-3;
+        @include typography-span-medium();
+    }
+    &__option:hover{
+        color: $accent-blue-1;
+        background-color: $primary-blue-2;
+    }
+}
+.visibl{
+    display: flex;
+}
+.bg{
+    background: $primary-gray-1;
+}

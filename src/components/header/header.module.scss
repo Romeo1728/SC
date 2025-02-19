@@ -1,0 +1,37 @@
+@use '../../styles/color-palette.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.header {
+    display: flex;
+    justify-content: right;
+    background-color: $primary-blue-6;
+    height: 20vh;
+
+    &__container {
+        padding: 30px 40px 0 40px;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    &__title {
+        grid-area: title;
+        color: $accent-blue-1;
+        @include typography-h2();
+        margin-bottom: 20px;
+    }
+
+    &__selects_block {
+        grid-area: filters;
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+
+.hidden {
+    display: none;
+}
+.header__users{
+    height: 13vh;  
+}
